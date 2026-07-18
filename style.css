@@ -1,0 +1,98 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:200px 200px;
+    grid-template-areas:
+        "profile about skills"
+        "projects projects contact";
+    gap:20px;
+    padding:20px;
+}
+
+.grid-container section{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+.profile{
+    grid-area:profile;
+}
+
+.about{
+    grid-area:about;
+}
+
+.skills{
+    grid-area:skills;
+}
+
+.projects{
+    grid-area:projects;
+}
+
+.contact{
+    grid-area:contact;
+}
+
+footer{
+    background:#1e3a8a;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+@media (max-width:992px){
+
+.grid-container{
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:
+        "profile about"
+        "skills projects"
+        "contact contact";
+}
+
+}
+
+
+@media (max-width:600px){
+
+.grid-container{
+    grid-template-columns:1fr;
+    grid-template-areas:
+        "profile"
+        "about"
+        "skills"
+        "projects"
+        "contact";
+}
+
+header h1{
+    font-size:24px;
+}
+
+.grid-container section{
+    padding:15px;
+}
+
+}
